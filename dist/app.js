@@ -15,7 +15,7 @@ var mongoose_1 = __importDefault(require("mongoose"));
 var homeController = __importStar(require("./controllers/home"));
 var App = /** @class */ (function () {
     function App() {
-        this.mongoUrl = 'mongodb+srv://yuk0399:password9@mongocluster-b9ii7.mongodb.net/test?retryWrites=true&w=majority';
+        this.mongoUrl = 'mongodb+srv://yuk0399:password9@mongocluster-b9ii7.mongodb.net/ts_sample?retryWrites=true&w=majority';
         this.app = express_1.default();
         this.app.set("port", process.env.PORT || 3000);
         this.app.get("/", homeController.index);

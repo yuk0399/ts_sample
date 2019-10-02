@@ -1,11 +1,11 @@
 import mongoose from "mongoose";
 export type UserDocument = mongoose.Document & {
-    name: string;
+    username: string;
     password: string;
 };
 
 const userSchema = new mongoose.Schema({
-    name: String,
+    username: String,
     password: String,
 }, { timestamps: true });
 
