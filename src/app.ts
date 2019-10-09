@@ -5,7 +5,8 @@ import * as homeController from "./controllers/home";
 class App {
 
     public app: express.Application;
-    public mongoUrl: string = 'mongodb+srv://yuk0399:password9@mongocluster-b9ii7.mongodb.net/ts_sample?retryWrites=true&w=majority';
+    public mongoUrl: string = 'mongodb://localhost/ts_sample?retryWrites=true&w=majority';
+    //string = 'mongodb+srv://yuk0399:password9@mongocluster-b9ii7.mongodb.net/ts_sample?retryWrites=true&w=majority';
     
     constructor() {
         this.app = express();
@@ -14,11 +15,11 @@ class App {
         this.config();
         this.mongoSetup();
     }
-    private config(): void{
+    private config(): void {
         
     }
 
-    private mongoSetup(): void{
+    private mongoSetup(): void {
         mongoose.Promise = global.Promise;
         mongoose.connect(this.mongoUrl);    
     }
